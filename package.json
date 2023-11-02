@@ -1,0 +1,17 @@
+{
+	"name": "calculator-app",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"build": "parcel build index.html --dist-dir ./dist",
+		"cleanup": "rmdir /q /s .parcel-cache dist || echo 'no cached files'",
+		"start": "npm run cleanup && parcel ./index.html"
+	},
+	"author": "Mostafa hussin",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.10.1",
+		"parcel": "^2.10.1"
+	}
+}

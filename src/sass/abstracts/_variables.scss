@@ -1,0 +1,82 @@
+@use 'functions' as F;
+
+// Theme (1)
+//   background
+$theme1-bg-main: hsl(222, 26%, 31%);
+$theme1-bg-secondry-1: hsl(223, 31%, 20%); //toggle, keypad
+$theme1-bg-secondry-2: hsl(224, 36%, 15%); //screen
+
+//  Keys
+$theme1-key-bg-blue: hsl(225, 21%, 49%);
+$theme1-key-shadow-blue: hsl(224, 28%, 35%);
+$theme1-key-bg-red: hsl(6, 63%, 50%); // red btns & toggle
+$theme1-key-shadow-red: hsl(6, 70%, 34%);
+$theme1-key-bg-grayish: hsl(30, 25%, 89%);
+$theme1-key-shadow-grayish: hsl(28, 16%, 65%);
+
+//  Text
+$theme1-txt-dark: hsl(221, 14%, 31%);
+$theme1-txt-light: hsl(0, 0%, 100%);
+
+//---------------------------------
+// Theme (2)
+//  background
+$theme2-bg-main: hsl(0, 0%, 90%);
+$theme2-bg-secondry-1: hsl(0, 5%, 81%); //toggle, keypad
+$theme2-bg-secondry-2: hsl(0, 0%, 93%); //screen
+
+//  Keys
+$theme2-key-bg-cyan: hsl(185, 42%, 37%);
+$theme2-key-shadow-cyan: hsl(185, 58%, 25%);
+$theme2-key-bg-orange: hsl(25, 98%, 40%);
+$theme2-key-shadow-orange: hsl(25, 99%, 27%); //orange btn & toggle
+$theme2-key-bg-gray: hsl(45, 7%, 89%);
+$theme2-key-shadow-gray: hsl(35, 11%, 61%);
+
+//  Text
+$theme2-txt-dark: hsl(60, 10%, 19%);
+$theme2-txt-light: hsl(0, 0%, 100%);
+
+//---------------------------------
+// Theme(3)
+$theme3-bg-main: hsl(268, 75%, 9%);
+$theme3-bg-secondry-1: hsl(268, 71%, 12%); //toggle, keypad, screen
+
+//  Keys
+$theme3-key-bg-violet: hsl(281, 89%, 26%);
+$theme3-key-shadow-violet: hsl(285, 91%, 52%);
+$theme3-key-bg-cyan: hsl(176, 100%, 44%); //orange btn & toggle
+$theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+$theme3-key-bg-violet2: hsl(268, 47%, 21%);
+$theme3-key-shadow-violet2: hsl(290, 70%, 36%);
+
+//  Text
+$theme3-txt-yellow: hsl(52, 100%, 62%);
+$theme3-txt-blue: hsl(198, 20%, 13%);
+$theme3-txt-light: hsl(0, 0%, 100%);
+
+//------------------------------------------------------------------
+// Font size
+
+$fs-600: F.torem(32);
+$fs-500: F.torem(22);
+$fs-400: F.torem(18);
+
+// Font family
+
+$ff-main: "League Spartan", sans-serif;
+
+// Font weight
+
+$fw-400: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+
+// break points
+
+$mediaPixels-up: (
+    'mobile': 37.5em, //600px
+    'tablet': 48em,  //768px
+    'desktop': 64em //1024
+);

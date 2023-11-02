@@ -1,0 +1,155 @@
+@use '../abstracts/variables' as V;
+@use '../abstracts/mixins' as M;
+
+// Theme (1)
+
+// backgrounds
+.theme1-bg-main {
+	background-color: V.$theme1-bg-main;
+}
+.theme1-bg-secondry-1 {
+	background-color: V.$theme1-bg-secondry-1;
+}
+.theme1-bg-secondry-2 {
+	background-color: V.$theme1-bg-secondry-2;
+}
+
+// keys
+
+.theme1-main-key {
+	background-color: V.$theme1-key-bg-grayish;
+	box-shadow: V.$theme1-key-shadow-grayish 0px 4px 2px;
+	color: V.$theme1-txt-dark;
+}
+
+.theme1-secondry-key {
+	background-color: V.$theme1-key-bg-blue;
+	box-shadow: V.$theme1-key-shadow-blue 0px 4px 2px;
+	color: V.$theme1-txt-light;
+}
+
+.theme1-third-key {
+	background-color: V.$theme1-key-bg-red;
+	box-shadow: V.$theme1-key-shadow-red 0px 4px 2px;
+	color: V.$theme1-txt-light;
+}
+
+// Theme (2)
+
+// backgrounds
+.theme2-bg-main {
+	background-color: V.$theme2-bg-main;
+}
+.theme2-bg-secondry-1 {
+	background-color: V.$theme2-bg-secondry-1;
+}
+.theme2-bg-secondry-2 {
+	background-color: V.$theme2-bg-secondry-2;
+}
+
+// keys
+
+.theme2-main-key {
+	background-color: V.$theme2-key-bg-gray;
+	box-shadow: V.$theme2-key-shadow-gray 0px 4px 2px;
+	color: V.$theme2-txt-dark;
+}
+
+.theme2-secondry-key {
+	background-color: V.$theme2-key-bg-cyan;
+	box-shadow: V.$theme2-key-shadow-cyan 0px 4px 2px;
+	color: V.$theme2-txt-light;
+}
+
+.theme2-third-key {
+	background-color: V.$theme2-key-bg-orange;
+	box-shadow: V.$theme2-key-shadow-orange 0px 4px 2px;
+	color: V.$theme2-txt-light;
+}
+
+// Theme (3)
+
+// backgrounds
+.theme3-bg-main {
+	background-color: V.$theme3-bg-main;
+}
+.theme3-bg-secondry-1 {
+	background-color: V.$theme3-bg-secondry-1;
+}
+
+.theme3-bg-secondry-2 {
+	background-color: V.$theme3-bg-secondry-1;
+}
+// keys
+
+.theme3-main-key {
+	background-color: V.$theme3-key-bg-violet2;
+	box-shadow: V.$theme3-key-shadow-violet2 0px 4px 2px;
+	color: V.$theme3-txt-yellow;
+}
+
+.theme3-secondry-key {
+	background-color: V.$theme3-key-bg-violet;
+	box-shadow: V.$theme3-key-shadow-violet 0px 4px 2px;
+	color: V.$theme3-txt-light;
+}
+
+.theme3-third-key {
+	background-color: V.$theme3-key-bg-cyan;
+	box-shadow: V.$theme3-key-shadow-cyan 0px 4px 2px;
+	color: V.$theme3-txt-blue;
+}
+
+// ---------------------------------------------------
+
+// font color
+.fc-theme1 {
+	color: V.$theme1-txt-light;
+}
+.fc-theme2 {
+	color: V.$theme2-txt-dark;
+}
+.fc-theme3 {
+	color: V.$theme3-txt-yellow;
+}
+
+// ----------------------------------------------------
+.bg-1 {
+	background-color: V.$theme1-key-bg-red;
+}
+.bg-2 {background-color: V.$theme2-key-bg-orange}
+.bg-3 {background-color: V.$theme3-key-bg-cyan}
+
+// font weight
+.fw-400 {
+	font-weight: V.$fw-400;
+}
+.fw-500 {
+	font-weight: V.$fw-500;
+}
+.fw-600 {
+	font-weight: V.$fw-600;
+}
+.fw-700 {
+	font-weight: V.$fw-700;
+}
+
+// font size
+.fs-600 {
+	font-size: V.$fs-600
+}
+
+.fs-500 {
+	font-size: V.$fs-500
+}
+// container
+
+.container {
+	@include M.Center();
+	width: 40%;
+	max-width: 500px;
+	height: fit-content;
+	@include M.respond-up(map-get(V.$mediaPixels-up, "mobile")) {
+		width: 80%;
+	}
+}

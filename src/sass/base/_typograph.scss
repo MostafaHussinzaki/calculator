@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as V;
+@use '../abstracts/mixins' as M;
+@use '../abstracts/functions' as F;
+
+* {
+	font-family: V.$ff-main;
+}
+
+

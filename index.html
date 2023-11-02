@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<!-- Font family -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./src/images/favicon-32x32.png"
+		/>
+
+		<!-- scss styling -->
+		<link rel="stylesheet" href="./src/sass/main.scss" />
+
+		<!-- javscript file -->
+		<script defer type="module" src="src/js/controller.js"></script>
+
+		<title>Calculator app</title>
+	</head>
+	<body class="| ">
+		<div class="container">
+			<div class="header">
+				<div class="header__name | fc fw-700">
+					<h2>calc</h2>
+				</div>
+				<div class="header__themes">
+					<div class="header__themes__text | fc">
+						<h6>Theme</h6>
+					</div>
+					<div class="header__themes__changes">
+						<ul class="header__themes__changes__numbers | fc">
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+						</ul>
+						<div class="header__themes__changes__toggle | bg-sec-1">
+							<div
+								class="header__themes__changes__toggle__dot | bg-toggle"
+								data-theme="1"
+							></div>
+							<!-- style="right: -40%" -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="screen | bg-sec-2">
+				<div class="screen__numbers | fc fw-700">
+					<p></p>
+				</div>
+			</div>
+			<div class="key | bg-sec-1">
+				<div class="key__btns | main-key fs-600 fw-600">7</div>
+				<div class="key__btns | main-key fs-600 fw-600">8</div>
+				<div class="key__btns | main-key fs-600 fw-600">9</div>
+				<div class="key__btns | secondry-key fs-500 fw-600">DEL</div>
+				<div class="key__btns | main-key fs-600 fw-600">4</div>
+				<div class="key__btns | main-key fs-600 fw-600">5</div>
+				<div class="key__btns | main-key fs-600 fw-600">6</div>
+				<div class="key__btns | main-key fs-500 fw-600">+</div>
+				<div class="key__btns | main-key fs-600 fw-600">1</div>
+				<div class="key__btns | main-key fs-600 fw-600">2</div>
+				<div class="key__btns | main-key fs-600 fw-600">3</div>
+				<div class="key__btns | main-key fs-500 fw-600">-</div>
+				<div class="key__btns | main-key fs-600 fw-600">.</div>
+				<div class="key__btns | main-key fs-600 fw-600">0</div>
+				<div class="key__btns | main-key fs-500 fw-600">/</div>
+				<div class="key__btns | main-key fs-500 fw-600">*</div>
+				<div class="key__btns key__btns--1 | secondry-key fs-500 fw-600">RESET</div>
+				<div class="key__btns key__btns--1 | third-key fs-500 fw-600">=</div>
+			</div>
+		</div>
+	</body>
+</html>
