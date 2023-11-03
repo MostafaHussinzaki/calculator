@@ -44,6 +44,31 @@ const changeTheme = function (themeNom = 1, prevTheme) {
 	});
 };
 
+const reset = function (e) {
+	if (e.target.innerText === "RESET") {
+		screen.textContent = "";
+	}
+};
+
+const del = function (e) {
+	if (e.target.innerText === "DEL") {
+		let arr = screen.textContent.split("");
+		arr.pop();
+		screen.textContent = arr.join("");
+	}
+};
+
+const equal = function (e) {
+	if (e.target.innerText === "=") {
+		let result = eval(screen.textContent);
+		if (result === result && result % 1 === 0) {
+			screen.textContent = result;
+		} else {
+			screen.textContent = result.toFixed(2);
+		}
+	}
+};
+
 changeTheme();
 
 let percent = 0;
@@ -72,33 +97,27 @@ keyPad.addEventListener("click", function (e) {
 	// gaurd class
 	if (!e.target.classList.contains("key__btns")) return;
 
+	let symbol = ["+", "-", "/", "*"];
 	// adding values to screen
 	if (
 		e.target.innerText !== "DEL" &&
 		e.target.innerText !== "RESET" &&
 		e.target.innerText !== "="
 	) {
-		screen.innerText += e.target.innerText;
+		// avoiding make double symbol
+		let btnClickedValue = e.target.innerText
+		try {
+			eval(`${(screen.innerText)}${btnClickedValue}${1}`);
+			screen.innerText += btnClickedValue;
+		} catch (err) {
+			screen.innerText += "";
+		}
 	}
 
 	// Reset button
-	if (e.target.innerText === "RESET") {
-		screen.textContent = "";
-	}
-
+	reset(e);
 	// Delete button
-	if (e.target.innerText === "DEL") {
-        let arr = screen.textContent.split('');
-        arr.pop()
-		screen.textContent = arr.join('');
-	}
+	del(e);
 	// equal button
-	if (e.target.innerText === "=") {
-		let result = eval(screen.textContent);
-		if (result === result && result % 1 === 0) {
-			screen.textContent = result;
-		} else {
-			screen.textContent = result.toFixed(2);
-		}
-	}
+	equal(e);
 });

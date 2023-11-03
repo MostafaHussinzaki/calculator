@@ -615,6 +615,23 @@ const changeTheme = function(themeNom1 = 1, prevTheme1) {
         el1.classList.add(`theme${themeNom1}-third-key`);
     });
 };
+const reset = function(e1) {
+    if (e1.target.innerText === "RESET") screen.textContent = "";
+};
+const del = function(e1) {
+    if (e1.target.innerText === "DEL") {
+        let arr1 = screen.textContent.split("");
+        arr1.pop();
+        screen.textContent = arr1.join("");
+    }
+};
+const equal = function(e) {
+    if (e.target.innerText === "=") {
+        let result = eval(screen.textContent);
+        if (result === result && result % 1 === 0) screen.textContent = result;
+        else screen.textContent = result.toFixed(2);
+    }
+};
 changeTheme();
 let percent = 0;
 toggle.addEventListener("click", function() {
@@ -635,22 +652,29 @@ toggle.addEventListener("click", function() {
 keyPad.addEventListener("click", function(e) {
     // gaurd class
     if (!e.target.classList.contains("key__btns")) return;
+    let symbol = [
+        "+",
+        "-",
+        "/",
+        "*"
+    ];
     // adding values to screen
-    if (e.target.innerText !== "DEL" && e.target.innerText !== "RESET" && e.target.innerText !== "=") screen.innerText += e.target.innerText;
+    if (e.target.innerText !== "DEL" && e.target.innerText !== "RESET" && e.target.innerText !== "=") {
+        // avoiding make double symbol
+        let btnClickedValue = e.target.innerText;
+        try {
+            eval(`${screen.innerText}${btnClickedValue}${1}`);
+            screen.innerText += btnClickedValue;
+        } catch (err) {
+            screen.innerText += "";
+        }
+    }
     // Reset button
-    if (e.target.innerText === "RESET") screen.textContent = "";
+    reset(e);
     // Delete button
-    if (e.target.innerText === "DEL") {
-        let arr = screen.textContent.split("");
-        arr.pop();
-        screen.textContent = arr.join("");
-    }
+    del(e);
     // equal button
-    if (e.target.innerText === "=") {
-        let result = eval(screen.textContent);
-        if (result === result && result % 1 === 0) screen.textContent = result;
-        else screen.textContent = result.toFixed(2);
-    }
+    equal(e);
 });
 
 },{}]},["kYpTN","aenu9"], "aenu9", "parcelRequire7495")

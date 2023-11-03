@@ -10,7 +10,6 @@
 }
 
 // media querys
-section {}
 // max-width
 @mixin respond-up($size) {
 	@if $size == map-get($mediaPixels-up, "mobile") {
@@ -20,7 +19,7 @@ section {}
 	}
 
 	@if $size == map-get($mediaPixels-up, "tablet") {
-		@media (width: map-get($mediaPixels-up , "tablet")) {
+		@media (max-width: map-get($mediaPixels-up , "tablet")) {
 			@content;
 		}
 	}
