@@ -97,7 +97,6 @@ keyPad.addEventListener("click", function (e) {
 	// gaurd class
 	if (!e.target.classList.contains("key__btns")) return;
 
-	let symbol = ["+", "-", "/", "*"];
 	// adding values to screen
 	if (
 		e.target.innerText !== "DEL" &&
