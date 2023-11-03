@@ -3,33 +3,31 @@
 // center element
 
 @mixin Center() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
-
 
 // media querys
 
 // max-width
 @mixin respond-up($size) {
-    @if $size == map-get($mediaPixels-up , 'mobile'){
-        @media(max-width: map-get($mediaPixels-up , 'mobile')) {
-            @content;
-        }
-    } 
-    
-    @if $size == map-get($mediaPixels-up , 'tablet'){
-        @media (max-width: map-get($mediaPixels-up , 'tablet')) {
-            @content;
-        }
-    }
+	@if $size == map-get($mediaPixels-up, "mobile") {
+		@media (max-width: map-get($mediaPixels-up , "mobile")) {
+			@content;
+		}
+	}
 
-    @if $size == map-get($mediaPixels-up , 'desktop'){
-        @media (max-width: map-get($mediaPixels-up , 'desktop')) {
-            @content;
-        }
-    }
+	@if $size == map-get($mediaPixels-up, "tablet") {
+		@media (width: map-get($mediaPixels-up , "tablet")) {
+			@content;
+		}
+	}
 
+	@if $size == map-get($mediaPixels-up, "desktop") {
+		@media (max-width: map-get($mediaPixels-up , "desktop")) {
+			@content;
+		}
+	}
 }
